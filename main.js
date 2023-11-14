@@ -1,61 +1,53 @@
 const home = document.querySelector('#home');
 const reseau = document.querySelector('#reseau');
 const projet = document.querySelector('#projet');
-const toggle_on = document.querySelector('#btn-toggle-on');
-const toggle_off = document.querySelector('#btn-toggle-off');
+const toggle_on = document.querySelector('#btn-toggle-off');
+const toggle_off = document.querySelector('#btn-toggle-on');
 
-home.addEventListener('click', ()=>{
-    window.location.href= './index.html';
-});
-
-reseau.addEventListener('click', ()=>{
-    window.location.href='./reseau.html';
-});
-
-projet.addEventListener('click', ()=>{
-    window.location.href= './projet.html';
-})
-
-document.addEventListener('DOMContentLoaded', function () {
+// Fonction pour définir le mode sombre
+function setDarkMode(value) {
     const body = document.body;
+    body.classList.toggle('dark-mode', value);
 
-    toggle_off.addEventListener('click', function () {
-        toggle_off.style.display = 'none';
-        toggle_on.style.display = 'block';
-        body.classList.toggle('dark-mode'); 
-        const elementsToToggleDarkMode = document.querySelectorAll('.projet-container, .img-container, .gran-img-contenaire, .container, .contenaire, .competences, .bar-bas, .image_language, .mes_reseaux');
+    const elementsToToggleDarkMode = document.querySelectorAll('.projet-container, .img-container, .gran-img-contenaire, .container, .contenaire, .competences, .bar-bas, .image_language, .mes_reseaux');
 
-        elementsToToggleDarkMode.forEach(function (element) {
-            element.classList.toggle('dark-mode');
-        });
+    elementsToToggleDarkMode.forEach(function (element) {
+        element.classList.toggle('dark-mode', value);
     });
 
-    toggle_on.addEventListener('click', ()=>{
-        toggle_off.style.display = 'block';
-        toggle_on.style.display = 'none';
-        body.classList.remove('dark-mode'); // Utilisez remove au lieu de toggle pour s'assurer que le mode sombre est désactivé
-        const elementsToToggleDarkMode = document.querySelectorAll('.projet-container, .img-container, .gran-img-contenaire, .container, .contenaire, .competences, .bar-bas, .image_language, .mes_reseaux');
-
-        elementsToToggleDarkMode.forEach(function (element) {
-            element.classList.remove('dark-mode'); // Utilisez remove pour s'assurer que le mode sombre est désactivé
-        });
-    })
-});
-
-
-function setCookie(name, value, days) {
-    var expires = "";
-    
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-
-    document.cookie = name + "=" + value + expires + "; path=/";
+    // Mettre à jour le bouton de basculement en fonction du mode sombre
+    toggle_off.style.display = value ? 'block' : 'none';
+    toggle_on.style.display = value ? 'none' : 'block';
 }
 
-// Exemple d'utilisation : définir un cookie nommé "theme" avec la valeur "dark" qui expire dans 30 jours
-setCookie("theme", "dark", 30);
+// Récupérer la préférence de l'utilisateur depuis localStorage
+const storedDarkMode = localStorage.getItem('darkMode');
+if (storedDarkMode === 'true') {
+    setDarkMode(true);
+} else {
+    setDarkMode(false);
+}
 
+// Événements de navigation
+home.addEventListener('click', () => {
+    window.location.href = './index.html';
+});
 
+reseau.addEventListener('click', () => {
+    window.location.href = './reseau.html';
+});
+
+projet.addEventListener('click', () => {
+    window.location.href = './projet.html';
+});
+
+// Événements de basculement du mode sombre
+toggle_off.addEventListener('click', function () {
+    setDarkMode(false);
+    localStorage.setItem('darkMode', 'false');
+});
+
+toggle_on.addEventListener('click', function () {
+    setDarkMode(true);
+    localStorage.setItem('darkMode', 'true');
+});
