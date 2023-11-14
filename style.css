@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body.dark-mode {
+    background-color: rgb(46, 48, 49);
+    color: white; /* Changez la couleur du texte en fonction de la lisibilité sur le fond sombre */
+}
+
+.projet-container.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+
+.img-container.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+
+.gran-img-contenaire.dark-mode{
+    background-color:rgb(46, 48, 49);
+    color: white;
+}
+
+.container.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+.contenaire.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+.competences.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+.bar-bas.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+.image_language.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+.mes_reseaux.dark-mode{
+    background-color: rgb(46, 48, 49);
+    color: white;
+}
+body{
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Roboto mono';
+    font-size: 12;
+    transition: background-color 0.5s ease;
+}
+
+.container{
+    background-color: white;
+    padding: 10px;
+}
+.container svg {
+    margin-top: -15px;
+    vertical-align: middle; 
+    margin-left: 90%;
+    display: flex;
+    width: 50px;
+}
+#btn-toggle-on{
+    display: none;
+    color: green;
+}
+
+.logo {
+    font-size: 25px;
+    color: brown;
+    font-weight: bold;
+    top: 5px;
+}
+
+.logo-span{
+    font-size: 25px;
+    color: black;
+    font: bold;
+}
+
+.contenaire{
+    margin: 25px;
+    display: flex;
+    box-sizing: content-box;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+}
+
+.image{
+    margin: 10px;
+    align-items: center;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 20px;
+}
+
+.presentation{
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.titre-presentation{
+    font-size: 30px;
+    margin: 15px;
+    color: brown;
+    font-weight: bold;
+}
+.titre-presentation span{
+    color: black;
+}
+.text-presentation{
+    font-size: 18px ;
+    margin: 5px;
+    box-sizing: content-box;
+}
+
+.competences{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.competences p{
+    margin: 10px;
+}
+
+.image_language{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.image_language img{
+    width: 70px;
+    height: 70px;
+    border-radius: 60%;
+    margin: 5px;
+}
+
+.image_language img:hover{
+    width: 90px;
+    height: 90px;
+    border-radius: 60%;
+    background-color: whitesmoke;
+}
+
+.clé-apport{
+    margin: 15px;
+
+}
+
+.web{
+    font-size:18px;
+    font-weight: 100;
+    box-sizing: content-box;
+}
+
+.securité{
+    font-size:18px;
+    font-weight: 100;
+    box-sizing: content-box;
+}
+
+.bar-bas{
+    padding: 5px;
+    width: auto;
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    display: flex;
+    text-align: center;
+}
+.bar-bas svg{
+    cursor: pointer;
+}
+
+.bar-bas svg:hover{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.mes_reseaux{
+    margin: 25px;
+    box-sizing: content-box;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+}
+
+.mes_reseaux h1{
+    margin: 20px;
+    color: brown;
+}
+
+.mes_reseaux p{
+    margin: 12px;
+    font-size: 18px;
+    box-sizing: content-box;
+    align-items: center;
+    text-align: center;
+}
+
+.lien-rs{
+    margin: 30px;
+}
+
+.lien-rs a{
+text-align: center;
+justify-content: space-between;
+text-decoration: none;
+color: black;
+margin: 10px;
+}
+
+.lien-rs a svg{
+    width: 30px;
+    height: 30px;
+}
+
+.projet-container{
+    margin: 25px;
+    box-sizing: content-box;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+}
+.projet-container h1{
+    margin: 25px;
+    color: brown;
+}
+
+.gran-img-contenaire {
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Pour espacer également les images sur la ligne */
+}
+
+.img-container{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-container img {
+    width: 300px; /* Ajustez la largeur des images en fonction de votre mise en page */
+    margin-bottom: 10px; /* Ajoute une marge inférieure pour séparer les images */
+    padding: auto;
+}
+
+.img-container p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.img-container a{
+    text-decoration: none;
+}
+.img-container a button{
+    padding: 5px;
+    border-radius: 10px;
+    width: 150px;
+    background-color: brown;
+    margin: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.img-container a button:hover{
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+/* Vos styles existants restent inchangés */
+
+/* Ajoutez ces règles de média queries pour rendre le site responsive */
+@media only screen and (max-width: 768px) {
+    .body{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .container{
+        width: 100%;
+        margin: 0px;
+    }
+    .contenaire{
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        box-sizing: content-box;
+        height: auto;
+        margin: 0px;
+    }
+    .competences{
+        width: 100%;
+        margin: 0px;
+        box-sizing: content-box;
+        display: flex;
+        flex-wrap: wrap;
+        grid-row: auto;
+    }
+    .image_language {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: content-box;
+        
+    }
+    .bar-bas{
+        width: 100%;
+    }
+    .mes_reseaux{
+        width: 100%;
+        box-sizing: content-box;
+        display: inline-block;
+        margin: 0px;
+    }
+
+    .mes_reseaux .image{
+        margin: 0px;
+        box-sizing: content-box;
+    }
+
+    .projet-container{
+        width: 100%;
+        margin: 0px;
+        box-sizing: content-box;
+        height: auto;
+    }
+
+    .gran-img-contenaire{
+        width: 100%;
+        margin: 0px;
+        box-sizing: content-box;
+    }
+    .img-container{
+        width: 100%;
+        margin: 3px;
+        box-sizing: content-box;
+    }
+    .container svg {
+        margin-top: -15px;
+        vertical-align: middle; 
+        margin-left: 80%;
+        display: flex;
+        width: 50px;
+    }
+}
+
