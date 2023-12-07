@@ -283,6 +283,16 @@ margin: 10px;
     padding: auto;
 }
 
+.fitness{
+    width: 500px;
+    padding: 5px;
+}
+
+.Grow{
+    width: 250px;
+    padding: 5px;
+}
+
 .img-container p{
     font-size: 18px;
     font-weight: bold;
